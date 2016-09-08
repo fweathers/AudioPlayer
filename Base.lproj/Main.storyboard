@@ -18,31 +18,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b02-H2-DuF">
-                                <frame key="frameInset" minX="172" minY="40" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b02-H2-DuF">
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="playButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dat-bK-6Kf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQj-ex-7XE">
-                                <frame key="frameInset" minX="166" minY="118" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQj-ex-7XE">
                                 <state key="normal" title="Pause"/>
                                 <connections>
                                     <action selector="pauseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEZ-2m-78e"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cec-4B-l6I">
-                                <frame key="frameInset" minX="128" minY="210" width="118" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cec-4B-l6I">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="Lkj-oR-nsx"/>
+                                </constraints>
                                 <connections>
                                     <action selector="volumeSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="hnR-dm-5Jb"/>
                                 </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b02-H2-DuF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="1B9-2h-Kjw"/>
+                            <constraint firstItem="b02-H2-DuF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5jQ-OX-kJG"/>
+                            <constraint firstItem="MQj-ex-7XE" firstAttribute="top" secondItem="b02-H2-DuF" secondAttribute="bottom" constant="45" id="EwN-YA-506"/>
+                            <constraint firstItem="cec-4B-l6I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QCR-c3-YuS"/>
+                            <constraint firstItem="MQj-ex-7XE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QaU-HC-brS"/>
+                            <constraint firstItem="cec-4B-l6I" firstAttribute="top" secondItem="MQj-ex-7XE" secondAttribute="bottom" constant="45" id="dpe-L3-L0H"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
