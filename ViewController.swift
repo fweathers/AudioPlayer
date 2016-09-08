@@ -13,6 +13,15 @@ class ViewController: UIViewController {
     
     var player = AVAudioPlayer()
 
+    @IBAction func playButtonTapped(_ sender: AnyObject) {
+    }
+    
+    @IBAction func pauseButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func volumeSlider(_ sender: UISlider) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
