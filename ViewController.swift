@@ -14,12 +14,21 @@ class ViewController: UIViewController {
     var player = AVAudioPlayer()
 
     @IBAction func playButtonTapped(_ sender: AnyObject) {
+        
+        player.play()
+
     }
     
     @IBAction func pauseButtonTapped(_ sender: UIButton) {
+        
+        player.pause()
+        
     }
     
     @IBAction func volumeSlider(_ sender: UISlider) {
+        
+        player.volume = sender.value
+        
     }
     
     override func viewDidLoad() {
@@ -30,8 +39,6 @@ class ViewController: UIViewController {
         do {
             
             try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
-            
-            player.play()
             
         } catch {
             
